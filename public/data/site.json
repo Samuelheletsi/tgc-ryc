@@ -1,0 +1,89 @@
+{
+  "home": {
+    "welcome": "We’re glad you’re here",
+    "backgroundVideo": "/videos/home-bg.mp4",
+    "cards": [
+      { "title": "Programs", "image": "/images/program1.jpg", "link": "/programs" },
+      { "title": "Events", "image": "/images/event1.jpg", "link": "/events" },
+      { "title": "Outreach", "image": "/images/outreach1.jpg", "link": "/outreach" },
+      { "title": "Testimonies", "image": "/images/testimony1.jpg", "link": "/testimonies" }
+    ]
+  },
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Sunday Service",
+      "description": "Join us this Sunday for worship at 9 AM and 11 AM.",
+      "type": "events",
+      "date": "2025-09-01",
+      "link": "/events/sunday-service",
+      "read": false
+    },
+    {
+      "id": 2,
+      "title": "Youth Outreach Program",
+      "description": "Be part of our community outreach next Saturday.",
+      "type": "programs",
+      "date": "2025-09-05",
+      "link": "/programs/youth-outreach",
+      "read": false
+    },
+    {
+      "id": 3,
+      "title": "Testimony Night",
+      "description": "Share and hear inspiring testimonies this Friday.",
+      "type": "testimonies",
+      "date": "2025-09-03",
+      "link": "/events/testimony-night",
+      "read": false
+    }
+  ],
+  "events": [
+    { "title": "Sunday Service", "image": "/images/event1.jpg", "link": "/events/sunday-service" },
+    { "title": "Youth Outreach", "image": "/images/event2.jpg", "link": "/events/youth-outreach" },
+    { "title": "Bible Study", "image": "/images/event3.jpg", "link": "/events/bible-study" }
+  ],
+  "gallery": [
+    { "title": "Praise & Worship", "image": "/images/gallery1.jpg", "link": "/gallery/praise" },
+    { "title": "Community Outreach", "image": "/images/gallery2.jpg", "link": "/gallery/outreach" },
+    { "title": "Testimonies", "image": "/images/gallery3.jpg", "link": "/gallery/testimonies" },
+    { "title": "Programs", "image": "/images/gallery4.jpg", "link": "/gallery/programs" }
+  ],
+  "prayerOfSalvation": "Lord Jesus, I believe in You, I confess my sins, and I accept You as my Lord and Savior. I invite You into my heart. Amen.",
+  "bibleVerses": [
+    "For God so loved the world that He gave His only Son, that whoever believes in Him shall not perish but have eternal life. – John 3:16",
+    "I can do all things through Christ who strengthens me. – Philippians 4:13",
+    "Trust in the Lord with all your heart and lean not on your own understanding. – Proverbs 3:5"
+  ],
+  "bibleVersesWithImages": [
+    { "verse": "John 3:16", "text": "For God so loved the world...", "image": "/images/verse1.jpg" },
+    { "verse": "Philippians 4:13", "text": "I can do all things through Christ...", "image": "/images/verse2.jpg" },
+    { "verse": "Proverbs 3:5", "text": "Trust in the Lord with all your heart...", "image": "/images/verse3.jpg" }
+  ],
+  "about": {
+    "text": "Christ Embassy – Royalties Youth Church is a place of worship, service, and growth in Christ. We are committed to building a community of young believers who impact the world for Jesus.",
+    "pastorMessage": "For where two or three gather in my name, there am I with them. – Pastor’s Message",
+    "pastorImage": "/images/pastor.jpg"
+  },
+  "contact": {
+    "address": "123 Church Street, City",
+    "email": "info@royaltiesyouth.com",
+    "phone": "+123 456 7890",
+    "website": "https://royaltiesyouth.com"
+  },
+  "rhapsody": {
+    "title": "Rhapsody on Salvation",
+    "description": "Listen and meditate on the message of salvation.",
+    "audio": "/audio/rhapsody.mp3"
+  },
+  "groupsTeaser": "Interested in joining a group or department? Find a place to serve and grow in Christ.",
+  "crossword": {
+    "title": "Bible Crossword Challenge",
+    "gridSize": 5,
+    "clues": [
+      "1 Across: First man",
+      "2 Down: Ark builder",
+      "3 Across: Sea that parted"
+    ]
+  }
+}
