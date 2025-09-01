@@ -34,35 +34,36 @@ export default function HomeContent() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-screen w-full">
-        <video
-          className="absolute w-full h-full object-cover"
-          src={home.backgroundVideo}
-          autoPlay
-          loop
-          muted
-        />
-        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4 py-6">
-          <motion.h1
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="text-4xl md:text-6xl font-bold text-gold mb-6"
-          >
-            {home.welcome}
-          </motion.h1>
+  <video
+    className="absolute w-full h-full object-cover"
+    src={home.backgroundVideo}
+    autoPlay
+    loop
+    muted
+  />
+  <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4 py-20 md:py-32 z-10">
+    <motion.h1
+      initial={{ y: 50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="text-4xl md:text-6xl font-bold text-gold mb-6 max-w-4xl"
+    >
+      {home.welcome}
+    </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-6xl"
-          >
-            {home.cards.map((card: CardType) => (
-              <Card key={card.title} card={card} />
-            ))}
-          </motion.div>
-        </div>
-      </section>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.5 }}
+      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto w-full"
+    >
+      {home.cards.map((card: CardType) => (
+        <Card key={card.title} card={card} />
+      ))}
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Event Slider */}
       <motion.section

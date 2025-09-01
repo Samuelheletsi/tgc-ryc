@@ -9,7 +9,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-navy text-white z-50 shadow-md">
+    <nav className="fixed top-0 left-0 w-full bg-amber-300 text-white z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
         {/* Logo / Brand */}
         <Link href="/" className="text-2xl font-bold text-gold">
