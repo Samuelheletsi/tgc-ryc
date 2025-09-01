@@ -9,7 +9,7 @@ export interface Notification {
   read: boolean;                        
 }
 
-// Card type for home/events/gallery
+// Card type for home/events/gallery/programs/testimonies
 export interface Card {
   title: string;
   image: string;
@@ -21,6 +21,7 @@ export interface HomeData {
   welcome: string;
   backgroundVideo: string;
   cards: Card[];
+  logo?: string; // Optional logo field
 }
 
 // About section
@@ -67,6 +68,9 @@ export interface SiteData {
   home: HomeData;
   notifications: Notification[];
   events: Card[];
+  outreaches: Card[];    // ✅ added
+  programs: Card[];       // ✅ added
+  testimonies: Card[];    // ✅ added
   gallery: Card[];
   prayerOfSalvation: string;
   bibleVerses: string[];

@@ -17,14 +17,16 @@ export default function AboutSection() {
       animate={controls}
       variants={variants}
       className="relative h-screen flex items-center justify-center bg-navy text-white p-6 overflow-hidden"
+      id='about'
     >
       <motion.div
         initial="hidden"
         animate={controls}
         variants={variants}
         className="max-w-4xl text-center space-y-6"
+        
       >
-        <h2 className="text-4xl font-bold text-gold" id='about'>About Us</h2>
+        <h2 className="text-4xl font-bold text-gold"  >About Us</h2>
         <p className="text-lg md:text-xl">
           Christ Embassy – Royalties Youth Church is a place of worship, service, and growth in Christ.
         </p>

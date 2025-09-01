@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Card from '@/components/Card';
 import EventSlider from '@/components/EventSlider';
 import Gallery from '@/components/Gallery';
@@ -9,7 +10,6 @@ import BibleVerseSection from '@/components/BibleVerseSection';
 import AboutSection from '@/components/AboutSection';
 import GroupsTeaser from '@/components/GroupsTeaser';
 import { Card as CardType, Notification, SiteData } from '@/types';
-import Link from 'next/link';
 
 export default function HomeContent() {
   const [siteData, setSiteData] = useState<SiteData | null>(null);
@@ -21,9 +21,11 @@ export default function HomeContent() {
       .catch(err => console.error('Failed to load site data', err));
   }, []);
 
-  if (!siteData) return <p className="text-white text-center mt-12">Loading...</p>;
+  if (!siteData) {
+    return <p className="text-white text-center mt-12">Loading...</p>;
+  }
 
-  const { home, notifications } = siteData;
+  const { home, notifications, gallery } = siteData;
   const latestNotifications: Notification[] = notifications
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
@@ -31,49 +33,54 @@ export default function HomeContent() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      {/* Hero Section */}
-<section className="relative min-h-screen w-full"> 
-  <video
-    className="absolute inset-0 w-full h-full object-cover"
-    src={home.backgroundVideo}
-    autoPlay
-    loop
-    muted
-  />
-  <div className="absolute inset-0 bg-black/60 z-10 flex flex-col items-center justify-center text-center px-4 py-20 md:py-32 overflow-y-auto">
-    <motion.h1
-      initial={{ y: 50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gold mb-6 max-w-4xl"
-    >
-      {home.welcome}
-    </motion.h1>
+      <section className="relative min-h-screen w-full">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={home.backgroundVideo}
+          autoPlay
+          loop
+          muted
+        />
+        <div className="absolute inset-0 bg-black/60 z-10 flex flex-col items-center justify-center text-center px-4 py-20 md:py-32 overflow-y-auto">
+          {home.logo && (
+            <img
+              src={home.logo}
+              alt="Royalties Youth Church Logo"
+              className="w-32 h-32 mb-4 mx-auto"
+            />
+          )}
+          <motion.h1
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gold mb-6 max-w-4xl"
+          >
+            {home.welcome}
+          </motion.h1>
 
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5 }}
-      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 w-full max-w-6xl px-2"
-    >
-      {home.cards.map((card: CardType) => (
-        <div key={card.title} className="w-full">
-          <Card card={card} />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 w-full max-w-6xl px-2"
+          >
+            {home.cards.map((card: CardType) => (
+              <div key={card.title} className="w-full">
+                <Card card={card} />
+              </div>
+            ))}
+          </motion.div>
         </div>
-      ))}
-    </motion.div>
-  </div>
-</section>
-
+      </section>
 
       {/* Event Slider */}
-      <section className="px-2 sm:px-4 sm:mt-13 md:px-8 lg:px-16 py-10 overflow-hidden">
+      {/* <section className="px-2 sm:px-4 md:px-8 lg:px-16 py-10 overflow-hidden">
         <EventSlider events={home.cards} />
-      </section>
+      </section> */}
 
       {/* Gallery */}
       <section className="px-2 sm:px-4 md:px-8 lg:px-16 py-10 overflow-hidden">
-        <Gallery images={home.cards} />
+        <Gallery images={gallery} />
       </section>
 
       {/* Prayer Section */}
@@ -81,7 +88,7 @@ export default function HomeContent() {
         <PrayerSection />
       </section>
 
-      {/* Bible Verses */}
+      {/* Bible Verses Section */}
       <section className="px-2 sm:px-4 md:px-8 lg:px-16 py-10">
         <BibleVerseSection />
       </section>

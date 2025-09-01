@@ -1,12 +1,13 @@
 {
   "home": {
-    "welcome": "Welcome to Royalties Youth Church, We’re glad you’re here",
+    "welcome": "Welcome to CE-RYC, The Gloriuos Church, We’re glad you’re here",
+    "logo": "/images/hryc.png",
     "backgroundVideo": "/videos/camp-vid.mp4",
     "cards": [
       { "title": "Programs", "image": "/images/program-1.jpeg", "link": "/programs" },
       { "title": "Events", "image": "/images/event1.jpeg", "link": "/events" },
-      { "title": "Outreach", "image": "/images/program-1.jpeg", "link": "/outreach" },
-      { "title": "Testimonies", "image": "/images/program-1.jpeg", "link": "/testimonies" }
+      { "title": "Outreach", "image": "/images/outreach1.jpeg", "link": "/outreach" },
+      { "title": "Testimonies", "image": "/images/testimony1.jpeg", "link": "/testimonies" }
     ]
   },
   "notifications": [
@@ -40,14 +41,29 @@
   ],
   "events": [
     { "title": "Encounter Retreat", "image": "/images/event1.jpeg", "link": "/events/retreat" },
-    { "title": "SCLTP", "image": "/images/event2.jpg", "link": "/events/scltp" },
+    { "title": "Jesus Alive", "image": "/images/program-1.jpeg", "link": "/events/scltp" },
     { "title": "Ladis Meeting", "image": "/images/event3.jpeg", "link": "/events/ladis" }
   ],
+    "programs": [
+    { "title": "Exceeding Glory Camp", "image": "/images/exc3.jpeg", "link": "/events/retreat" },
+    { "title": "Camp2", "image": "/images/exc3.jpeg", "link": "/events/scltp" },
+    { "title": "Camp2", "image": "/images/event3.jpeg", "link": "/events/ladis" }
+  ],
+    "outreaches": [
+    { "title": "Outreach 1", "image": "/images/event1.jpeg", "link": "/events/retreat" },
+    { "title": "Outreach 2", "image": "/images/outreach1.jpeg", "link": "/images/event1.jpeg" },
+    { "title": "Outreach 3", "image": "/images/outreach1.jpeg", "link": "/events/ladis" }
+  ],
+      "testimonies": [
+    { "title": "Testimony 1", "image": "/images/testimony1.jpeg", "link": "/events/retreat" },
+    { "title": "Testimony 2", "image": "/images/testimony1.jpeg", "link": "/events/scltp" },
+    { "title": "Testimony 3", "image": "/images/testimony1.jpeg", "link": "/events/ladis" }
+  ],
   "gallery": [
-    { "title": "Praise & Worship", "image": "/images/gallery1.jpg", "link": "/gallery/praise" },
-    { "title": "Community Outreach", "image": "/images/gallery2.jpg", "link": "/gallery/outreach" },
-    { "title": "Testimonies", "image": "/images/gallery3.jpg", "link": "/gallery/testimonies" },
-    { "title": "Programs", "image": "/images/gallery4.jpg", "link": "/gallery/programs" }
+    { "title": "Praise & Worship", "image": "/images/exc3.jpeg", "link": "/gallery/praise" },
+    { "title": "Community Outreach", "image": "/images/awd.jpeg", "link": "/gallery/outreach" },
+    { "title": "Testimonies", "image": "/images/awd1.jpeg", "link": "/gallery/testimonies" },
+    { "title": "Programs", "image": "/images/exc6.jpeg", "link": "/gallery/programs" }
   ],
   "prayerOfSalvation": "Lord Jesus, I believe in You, I confess my sins, and I accept You as my Lord and Savior. I invite You into my heart. Amen.",
   "bibleVerses": [
