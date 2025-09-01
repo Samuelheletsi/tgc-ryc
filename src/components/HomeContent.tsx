@@ -15,15 +15,13 @@ export default function HomeContent() {
   const [siteData, setSiteData] = useState<SiteData | null>(null);
 
   useEffect(() => {
-    fetch('/data/site.json') // ✅ fetch instead of import
-      .then((res) => res.json())
+    fetch('/data/site.json')
+      .then(res => res.json())
       .then((data: SiteData) => setSiteData(data))
-      .catch((err) => console.error('Failed to load site data', err));
+      .catch(err => console.error('Failed to load site data', err));
   }, []);
 
-  if (!siteData) {
-    return <p className="text-white text-center mt-12">Loading...</p>;
-  }
+  if (!siteData) return <p className="text-white text-center mt-12">Loading...</p>;
 
   const { home, notifications } = siteData;
   const latestNotifications: Notification[] = notifications
@@ -34,77 +32,52 @@ export default function HomeContent() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-screen w-full">
-  <video
-    className="absolute w-full h-full object-cover"
-    src={home.backgroundVideo}
-    autoPlay
-    loop
-    muted
-  />
-  <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4 py-20 md:py-32 z-10">
-    <motion.h1
-      initial={{ y: 50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="text-4xl md:text-6xl font-bold text-gold mb-6 max-w-4xl"
-    >
-      {home.welcome}
-    </motion.h1>
+        <video
+          className="absolute w-full h-full object-cover"
+          src={home.backgroundVideo}
+          autoPlay
+          loop
+          muted
+        />
+        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4 py-32 md:py-40 z-10">
+          <motion.h1
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-4xl md:text-6xl font-bold text-gold mb-6 max-w-4xl"
+          >
+            {home.welcome}
+          </motion.h1>
 
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5 }}
-      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto w-full"
-    >
-      {home.cards.map((card: CardType) => (
-        <Card key={card.title} card={card} />
-      ))}
-    </motion.div>
-  </div>
-</section>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto w-full"
+          >
+            {home.cards.map((card: CardType) => (
+              <Card key={card.title} card={card} />
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
-
-      {/* Event Slider */}
-      <motion.section
-        initial={{ rotateY: 90, opacity: 0 }}
-        whileInView={{ rotateY: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
+      {/* Other Sections */}
+      <section className="px-4 md:px-8 lg:px-16 py-12 md:py-20">
         <EventSlider events={home.cards} />
-      </motion.section>
+      </section>
 
-      {/* Gallery */}
-      <motion.section
-        initial={{ rotateY: 90, opacity: 0 }}
-        whileInView={{ rotateY: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
+      <section className="px-4 md:px-8 lg:px-16 py-12 md:py-20">
         <Gallery images={home.cards} />
-      </motion.section>
+      </section>
 
-      {/* Prayer of Salvation */}
       <PrayerSection />
-
-      {/* Bible Verses */}
       <BibleVerseSection />
-
-      {/* About Section */}
       <AboutSection />
-
-      {/* Groups / Departments teaser */}
       <GroupsTeaser />
 
-      {/* Notifications Teaser */}
-      <motion.section
-        initial={{ rotateY: 90, opacity: 0 }}
-        whileInView={{ rotateY: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="mt-16 p-6"
-      >
+      {/* Notifications */}
+      <section className="px-4 md:px-8 lg:px-16 py-12 md:py-20">
         <h2 className="text-3xl font-bold text-gold mb-6">Latest Announcements</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {latestNotifications.map((n: Notification) => (
@@ -132,7 +105,7 @@ export default function HomeContent() {
             View All Notifications
           </Link>
         </div>
-      </motion.section>
+      </section>
     </div>
   );
 }

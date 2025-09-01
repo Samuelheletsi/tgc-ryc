@@ -1,47 +1,111 @@
 @import "tailwindcss";
 
-/* Primary branding colors */
 :root {
-  --background: #0b1a33; /* Deep navy blue */
-  --foreground: #ffffff;  /* White text */
-  --accent: #f5d46b;      /* Gold highlight */
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: #0b1a33;       /* Deep navy background */
+  --color-gold: #f5d46b;       /* Gold highlights */
+  --color-white: #ffffff;       /* White text */
+  --color-light-navy: #1a2b4c;  /* Slightly lighter navy for cards */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b1a33;
-    --foreground: #ffffff;
-    --accent: #f5d46b;
+    --color-navy: #0b1a33;
+    --color-gold: #f5d46b;
+    --color-white: #ffffff;
+    --color-light-navy: #1a2b4c;
   }
 }
 
+/* Base body styling */
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-navy);
+  color: var(--color-white);
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
 
-/* Optional: links, buttons, and highlights */
-a, .text-gold {
-  color: var(--accent);
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-gold);
+  font-weight: bold;
 }
 
-.bg-gold {
-  background-color: var(--accent);
+/* Links */
+a {
+  color: var(--color-white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--color-gold);
 }
 
-.bg-navy {
-  background-color: var(--background);
+/* Buttons */
+button {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #e0c95c; /* Slightly darker gold for hover */
 }
 
-.border-gold {
-  border-color: var(--accent);
+/* Cards & sections */
+.card, .bg-navy {
+  background-color: var(--color-light-navy);
+  color: var(--color-white);
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Navbar */
+nav {
+  background-color: var(--color-navy);
+}
+nav a {
+  color: var(--color-white);
+}
+nav a:hover {
+  color: var(--color-gold);
+}
+
+/* Notification badge */
+.badge {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Video overlay */
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .card {
+    padding: 0.75rem;
+  }
 }

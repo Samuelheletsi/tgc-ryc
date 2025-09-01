@@ -9,9 +9,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-navy text-white z-50 shadow-md">
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
-        {/* Logo / Brand */}
+    <nav className="fixed top-0 left-0 w-full bg-navy text-white z-50 shadow-md h-16 md:h-20">
+      <div className="max-w-7xl mx-auto flex justify-between items-center p-4 h-full">
+        {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-gold">
           CE-RYC, The Glorious Church
         </Link>
@@ -39,10 +39,7 @@ export default function Navbar() {
 
         {/* Mobile Hamburger */}
         <div className="md:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="focus:outline-none"
-          >
+          <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
             <span className="block w-6 h-0.5 bg-gold mb-1"></span>
             <span className="block w-6 h-0.5 bg-gold mb-1"></span>
             <span className="block w-6 h-0.5 bg-gold"></span>
@@ -53,13 +50,13 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-navy p-4 flex flex-col space-y-4">
-          <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-gold">Home</Link>
-          <Link href="/programs" onClick={() => setMenuOpen(false)} className="hover:text-gold">Programs</Link>
-          <Link href="/events" onClick={() => setMenuOpen(false)} className="hover:text-gold">Events</Link>
-          <Link href="/outreach" onClick={() => setMenuOpen(false)} className="hover:text-gold">Outreach</Link>
-          <Link href="/testimonies" onClick={() => setMenuOpen(false)} className="hover:text-gold">Testimonies</Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)} className="hover:text-gold">About Us</Link>
-          <Link href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-gold">Contact</Link>
+          <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link href="/programs" onClick={() => setMenuOpen(false)}>Programs</Link>
+          <Link href="/events" onClick={() => setMenuOpen(false)}>Events</Link>
+          <Link href="/outreach" onClick={() => setMenuOpen(false)}>Outreach</Link>
+          <Link href="/testimonies" onClick={() => setMenuOpen(false)}>Testimonies</Link>
+          <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+          <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
         </div>
       )}
     </nav>
