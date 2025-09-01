@@ -41,7 +41,7 @@ export default function HomeContent() {
           loop
           muted
         />
-        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4 py-4">
           <motion.h1
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
