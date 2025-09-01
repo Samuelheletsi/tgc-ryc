@@ -1,7 +1,7 @@
 {
   "home": {
-    "welcome": "We’re glad you’re here",
-    "backgroundVideo": "/videos/home-bg.mp4",
+    "welcome": "Welcome to Royalties Youth Church, We’re glad you’re here",
+    "backgroundVideo": "/videos/camp-vid.mp4",
     "cards": [
       { "title": "Programs", "image": "/images/program1.jpg", "link": "/programs" },
       { "title": "Events", "image": "/images/event1.jpg", "link": "/events" },

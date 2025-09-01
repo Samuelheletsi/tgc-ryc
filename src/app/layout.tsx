@@ -7,6 +7,9 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "Christ Embassy – Royalties Youth Church",
   description: "Official website",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
