@@ -14,7 +14,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-navy text-white font-sans">
         <Navbar />
         {/* Add top padding to prevent overlap with fixed navbar */}
-        <main className="pt-16 md:pt-20">{children}</main>
+        <main className="pt-20 md:pt-24">{children}</main>
+
       </body>
     </html>
   );
