@@ -3,10 +3,10 @@
     "welcome": "Welcome to Royalties Youth Church, We’re glad you’re here",
     "backgroundVideo": "/videos/camp-vid.mp4",
     "cards": [
-      { "title": "Programs", "image": "/images/program1.jpg", "link": "/programs" },
-      { "title": "Events", "image": "/images/event1.jpg", "link": "/events" },
-      { "title": "Outreach", "image": "/images/outreach1.jpg", "link": "/outreach" },
-      { "title": "Testimonies", "image": "/images/testimony1.jpg", "link": "/testimonies" }
+      { "title": "Programs", "image": "/images/program-1.jpeg", "link": "/programs" },
+      { "title": "Events", "image": "/images/event1.jpeg", "link": "/events" },
+      { "title": "Outreach", "image": "/images/program-1.jpeg", "link": "/outreach" },
+      { "title": "Testimonies", "image": "/images/program-1.jpeg", "link": "/testimonies" }
     ]
   },
   "notifications": [
@@ -39,9 +39,9 @@
     }
   ],
   "events": [
-    { "title": "Sunday Service", "image": "/images/event1.jpg", "link": "/events/sunday-service" },
-    { "title": "Youth Outreach", "image": "/images/event2.jpg", "link": "/events/youth-outreach" },
-    { "title": "Bible Study", "image": "/images/event3.jpg", "link": "/events/bible-study" }
+    { "title": "Encounter Retreat", "image": "/images/event1.jpeg", "link": "/events/retreat" },
+    { "title": "SCLTP", "image": "/images/event2.jpg", "link": "/events/scltp" },
+    { "title": "Ladis Meeting", "image": "/images/event3.jpeg", "link": "/events/ladis" }
   ],
   "gallery": [
     { "title": "Praise & Worship", "image": "/images/gallery1.jpg", "link": "/gallery/praise" },
